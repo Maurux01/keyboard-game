@@ -3,21 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Typing Game</title>
-  <style>
-<link rel="stylesheet" href="styles.css">
-  </style>
-  
+  <title>Juego de Mecanografía</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="container">
-    <div class="title">Typing Game</div>
-    <div id="current-word"></div>
-    <input type="text" id="input-field" placeholder="Type the word" autocomplete="off">
-    <div id="timer">Time left: 60 seconds</div>
-    <div id="score">Score: 0</div>
+  <h1>¡Practica tu velocidad de mecanografía!</h1>
+  <div id="game-container">
+    <p id="text-to-type">Escribe este texto lo más rápido posible.</p>
+    <input type="text" id="input-box" placeholder="Escribe aquí..." />
+    <p id="timer">Tiempo: 0 segundos</p>
+    <p id="score">Puntuación: 0</p>
+    <button id="start-button">Iniciar Juego</button>
   </div>
-
   <script src="script.js"></script>
 </body>
 </html>
