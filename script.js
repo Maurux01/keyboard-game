@@ -20,7 +20,7 @@ let words = []; // Lista de palabras actual (cargada dinámicamente)
 
 // Función para cargar palabras según el idioma
 async function loadWords(language) {
-    const filePath = language === "es" ? "spanish_words.txt" : "english_words.txt";
+    const filePath = language === "es" ? "assets/spanish_words.txt" : "assets/english_words.txt";
     try {
         const response = await fetch(filePath);
         if (response.ok) {
