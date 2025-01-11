@@ -1,5 +1,5 @@
 
-### Keyboard Game
+# Keyboard Game
 
 Este es un proyecto de un juego de mecanografía desarrollado con HTML, CSS y JavaScript. El objetivo del juego es mejorar la velocidad y precisión al escribir, mostrando palabras aleatorias que el jugador debe escribir lo más rápido posible.
 
