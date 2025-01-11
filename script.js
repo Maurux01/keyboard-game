@@ -4,6 +4,7 @@ const timer = document.getElementById("timer");
 const score = document.getElementById("score");
 const startButton = document.getElementById("start-button");
 const languageButton = document.getElementById("language-button");
+const pauseButton = document.getElementById("pause-button"); // Botón de pausa
 const feedback = document.createElement("p");
 
 // Inserta el feedback en el DOM
@@ -14,13 +15,14 @@ let time = 0;
 let interval;
 let currentWord = "";
 let points = 0;
+let paused = false; // Estado de pausa
 
 let currentLanguage = "es"; // Idioma inicial: español
 let words = []; // Lista de palabras actual (cargada dinámicamente)
 
 // Función para cargar palabras según el idioma
 async function loadWords(language) {
-    const filePath = language === "es" ? "assets/spanish_words.txt" : "assets/english_words.txt";
+    const filePath = language === "es" ? "assets/spanish_words.txt" : "assets/english_words.txt"; // Ruta ajustada
     try {
         const response = await fetch(filePath);
         if (response.ok) {
@@ -50,10 +52,12 @@ function startGame() {
 
 // Actualiza el temporizador
 function updateTimer() {
-    time++;
-    timer.textContent = currentLanguage === "es"
-        ? `Tiempo: ${time} segundos`
-        : `Time: ${time} seconds`;
+    if (!paused) { // Solo actualiza si no está pausado
+        time++;
+        timer.textContent = currentLanguage === "es"
+            ? `Tiempo: ${time} segundos`
+            : `Time: ${time} seconds`;
+    }
 }
 
 // Valida la entrada del usuario
@@ -94,6 +98,9 @@ function resetGame() {
     inputBox.value = "";
     inputBox.classList.remove("wrong", "correct");
     feedback.style.visibility = "hidden";
+    paused = false; // Asegúrate de que no esté pausado al reiniciar
+    pauseButton.textContent = "Pausar"; // Cambia el texto del botón
+    clearInterval(interval); // Detén cualquier intervalo anterior
 }
 
 // Genera una palabra aleatoria
@@ -111,10 +118,24 @@ async function toggleLanguage() {
     resetGame();
 }
 
+// Función para pausar o reanudar el temporizador
+function togglePause() {
+    if (paused) {
+        paused = false;
+        interval = setInterval(updateTimer, 1000); // Reinicia el temporizador
+        pauseButton.textContent = "Pausar"; // Cambia el texto del botón a "Pausar"
+    } else {
+        paused = true;
+        clearInterval(interval); // Detiene el temporizador
+        pauseButton.textContent = "Reanudar"; // Cambia el texto del botón a "Reanudar"
+    }
+}
+
 // Eventos
 startButton.addEventListener("click", startGame);
 inputBox.addEventListener("input", checkInput);
 languageButton.addEventListener("click", toggleLanguage);
+pauseButton.addEventListener("click", togglePause); // Agrega evento de pausa
 
 // Carga inicial de palabras
 loadWords(currentLanguage);
