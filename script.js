@@ -151,3 +151,13 @@ pauseButton.addEventListener("click", togglePause);
 
 // Carga inicial de palabras
 loadWords(currentLanguage);
+
+function skipWord() {
+    // Add your skip logic here
+    // For example:
+    console.log("Palabra saltada");
+    // Here you could add the logic to:
+    // 1. Mark the word as skipped
+    // 2. Move to the next word
+    // 3. Update any scores or progress
+}
