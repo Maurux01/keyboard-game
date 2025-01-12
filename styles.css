@@ -56,3 +56,27 @@ body {
 #header-buttons button:hover {
     background-color: #45a049;
 }
+
+/* Footer styles */
+.footer {
+    width: 100%;
+    padding: 20px 0;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+
+.footer a {
+    color: #4CAF50;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.footer a:hover {
+    color: #45a049;
+    text-decoration: underline;
+}
