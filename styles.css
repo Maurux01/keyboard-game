@@ -6,18 +6,17 @@ body {
     padding: 0;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
+    align-items: center;     /* Centers children horizontally */
+    justify-content: center; /* Centers children vertically */
     min-height: 100vh;
     color: #333;
-    text-align: center;
 }
 
 /* Header */
 #header {
-    margin-top: 20px;
+    margin: 20px auto;      /* Changed margin-top to margin auto */
     width: 100%;
-    max-width: 800px; /* Define el ancho máximo */
+    max-width: 800px;
     text-align: center;
     padding: 0 20px;
     box-sizing: border-box;
@@ -29,20 +28,22 @@ body {
     margin-bottom: 15px;
     text-transform: uppercase;
     letter-spacing: 1.2px;
+    text-align: center;     /* Ensure heading is centered */
 }
 
 /* Centrar los botones en la parte inferior */
 #header-buttons {
     display: flex;
-    justify-content: center;  /* Centra los botones horizontalmente */
-    align-items: center;  /* Centra los botones verticalmente */
+    justify-content: center;
+    align-items: center;
     gap: 10px;
-    margin-top: 20px; /* Ajusta el espacio entre el título y los botones */
+    margin: 20px auto;      /* Changed margin-top to margin auto */
+    width: 100%;            /* Added width */
 }
 
 /* Estilos para los botones */
 #header-buttons button {
-    background-color: #4CAF50; /* Ejemplo de color de fondo */
+    background-color: #4CAF50;
     color: white;
     padding: 10px 20px;
     border: none;
@@ -53,5 +54,5 @@ body {
 }
 
 #header-buttons button:hover {
-    background-color: #45a049; /* Color al pasar el cursor */
+    background-color: #45a049;
 }
