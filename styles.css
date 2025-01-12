@@ -31,11 +31,27 @@ body {
     letter-spacing: 1.2px;
 }
 
+/* Centrar los botones en la parte inferior */
 #header-buttons {
     display: flex;
-    justify-content: center;
+    justify-content: center;  /* Centra los botones horizontalmente */
+    align-items: center;  /* Centra los botones verticalmente */
     gap: 10px;
+    margin-top: 20px; /* Ajusta el espacio entre el título y los botones */
 }
 
+/* Estilos para los botones */
 #header-buttons button {
-    background
+    background-color: #4CAF50; /* Ejemplo de color de fondo */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+#header-buttons button:hover {
+    background-color: #45a049; /* Color al pasar el cursor */
+}
