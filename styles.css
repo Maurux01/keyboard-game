@@ -80,3 +80,30 @@ body {
     color: #45a049;
     text-decoration: underline;
 }
+
+/* Skip button styles */
+.skip-button {
+    background-color: #e74c3c; /* Red color to differentiate from green buttons */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    margin: 10px;
+}
+
+.skip-button:hover {
+    background-color: #c0392b; /* Darker red on hover */
+    transform: scale(1.05); /* Slight grow effect on hover */
+}
+
+.skip-button:active {
+    transform: scale(0.95); /* Slight shrink effect when clicked */
+}
+
+/* If you want to add an icon (optional) */
+.skip-button i {
+    margin-right: 5px;
+}
