@@ -13,13 +13,75 @@ body {
 }
 
 /* Contenedor principal */
+#main-container {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Header */
+#header {
+    margin-bottom: 20px;
+}
+
+#header h1 {
+    font-size: 2.5rem;
+    color: #222;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+}
+
+#header-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+#header-buttons button {
+    background-color: #4caf50;
+    color: #ffffff;
+    font-size: 1rem;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+#header-buttons button:hover {
+    background-color: #45a049;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+#header-buttons button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+/* Botón de pausa */
+#pause-button {
+    background-color: #ff9800;
+}
+
+#pause-button:hover {
+    background-color: #f57c00;
+}
+
+/* Contenedor del juego */
 #game-container {
     background-color: #ffffff;
     border-radius: 15px;
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
     padding: 30px;
-    width: 90%;
+    width: 100%;
     max-width: 400px;
+    margin: 0 auto;
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -30,7 +92,7 @@ body {
 }
 
 /* Títulos y texto */
-h1 {
+#game-container h2 {
     font-size: 2rem;
     color: #222;
     margin-bottom: 20px;
@@ -71,46 +133,15 @@ h1 {
 }
 
 /* Temporizador y puntuación */
-#timer, #score {
+#info {
     font-size: 1rem;
     margin-bottom: 20px;
     color: #555;
     font-weight: bold;
 }
 
-/* Botones */
-button {
-    background-color: #4caf50;
-    color: #ffffff;
-    font-size: 1rem;
-    padding: 12px 24px;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    margin: 5px;
-    transition: background-color 0.3s, transform 0.2s;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-button:hover {
-    background-color: #45a049;
-    transform: translateY(-3px);
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
-}
-
-button:disabled {
-    background-color: #ccc;
-    cursor: not-allowed;
-    box-shadow: none;
-}
-
-/* Botón de pausa */
-#pause-button {
-    background-color: #ff9800;
-}
-
-#pause-button:hover {
-    background-color: #f57c00;
+#info p {
+    margin: 5px 0;
 }
 
 /* Feedback */
@@ -138,22 +169,30 @@ button:disabled {
 
 /* Responsividad */
 @media (max-width: 768px) {
-    h1 {
+    #header h1 {
+        font-size: 1.8rem;
+    }
+
+    #header-buttons button {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+
+    #game-container h2 {
         font-size: 1.8rem;
     }
 
     #text-to-type {
         font-size: 1.2rem;
     }
-
-    button {
-        padding: 10px 20px;
-        font-size: 0.9rem;
-    }
 }
 
 @media (max-width: 480px) {
-    h1 {
+    #header h1 {
+        font-size: 1.6rem;
+    }
+
+    #game-container h2 {
         font-size: 1.6rem;
     }
 
