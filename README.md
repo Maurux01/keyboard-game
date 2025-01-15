@@ -1,4 +1,3 @@
-Based on the information available, here's an improved README in English for your project, along with an "About" section:
 
 # Keyboard Game
 
