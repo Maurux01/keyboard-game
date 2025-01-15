@@ -1,7 +1,7 @@
 /* Estilos generales */
 body {
     font-family: 'Poppins', sans-serif;
-    background: linear-gradient(135deg, #eef3f7, #cfd9df);
+    background: linear-gradient(135deg, #eef3f7, #d6e0e6);
     margin: 0;
     padding: 0;
     display: flex;
@@ -25,7 +25,7 @@ body {
 #header h1 {
     font-size: 2.8rem;
     color: #222;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     text-transform: uppercase;
     letter-spacing: 1.5px;
     font-weight: 700;
@@ -40,5 +40,103 @@ body {
     border-radius: 15px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
     width: 90%;
-    max-width: 700px;
-    margin:
+    max-width: 600px;
+    margin: 20px auto;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.game-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Botones */
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px 0;
+    flex-wrap: wrap;
+}
+
+.game-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease, transform 0.2s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.start-button {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.language-button {
+    background-color: #2196F3;
+    color: white;
+}
+
+.pause-button {
+    background-color: #FFA000;
+    color: white;
+}
+
+.game-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.game-button:active {
+    transform: translateY(0);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+}
+
+/* Campo de texto */
+.text-input {
+    width: 100%;
+    max-width: 500px;
+    padding: 15px;
+    margin: 20px 0;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.text-input:focus {
+    outline: none;
+    border-color: #4CAF50;
+    box-shadow: 0 0 8px rgba(76, 175, 80, 0.4);
+}
+
+/* Estadísticas */
+.stats {
+    font-size: 1.1rem;
+    color: #555;
+    margin-top: 10px;
+    text-align: left;
+}
+
+/* Footer */
+footer {
+    margin-top: 20px;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+footer a {
+    color: #2196F3;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
