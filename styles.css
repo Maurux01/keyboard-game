@@ -186,3 +186,45 @@ button:hover {
     width: 100%;
     box-sizing: border-box;
 }
+
+.text-content {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    line-height: 1.6;
+    letter-spacing: 0.3px;
+}
+
+.text-english {
+    color: #a8d8ea;
+    font-weight: 500;
+}
+
+.text-spanish {
+    color: #aa96da;
+    font-weight: 500;
+}
+
+.generated-text {
+    padding: 15px;
+    margin: 10px 0;
+    background-color: #2d3440;
+    border-left: 4px solid #66a5ad;
+    border-radius: 0 8px 8px 0;
+    transition: all 0.3s ease;
+}
+
+.generated-text:hover {
+    background-color: #333b4d;
+    transform: translateX(5px);
+}
+
+.typing-area::placeholder {
+    color: #a0aec0;
+    opacity: 0.8;
+    font-style: italic;
+    transition: all 0.3s ease;
+}
+
+.typing-area:focus::placeholder {
+    opacity: 0.5;
+    transform: translateX(5px);
+}
