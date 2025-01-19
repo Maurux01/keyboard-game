@@ -22,7 +22,33 @@ body {
 }/* Main container enhancements */
 #main-container {
     background-color: #20232a;
-    padding: 40px;
+    padding    .typing-area::placeholder {
+        color: #8b97a8;
+        opacity: 0.7;
+        font-style: italic;
+        transition: opacity 0.3s ease;
+    }
+    
+    .typing-area {
+        background-color: #384150;
+        color: #e3e7ed;
+        border: 1px solid #66a5ad;
+        padding: 15px;
+        border-radius: 8px;
+        font-size: 16px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    
+    .typing-area:focus {
+        border-color: #80cbc4;
+        outline: none;
+        box-shadow: 0 0 5px rgba(102, 165, 173, 0.3);
+    }
+    
+    .typing-area:focus::placeholder {
+        opacity: 0.4;
+    }: 40px;
     border-radius: 15px;
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6);
     margin: 20px auto;
