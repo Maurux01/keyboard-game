@@ -190,5 +190,48 @@ button:hover {
         padding: 1rem 1.5rem;
         font-size: 1.1rem;
     }
+} 
+
+.typing-area::placeholder {
+    color: rgba(169, 177, 214, 0.7);
+    font-style: italic;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+    letter-spacing: 0.5px;
 }
 
+#timer, #score {
+    background: linear-gradient(145deg, rgba(31, 35, 53, 0.8), rgba(31, 35, 53, 0.6));
+    padding: 1rem 1.5rem;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    color: var(--secondary);
+    border: 1px solid var(--primary);
+    margin: 0.5rem;
+    min-width: 150px;
+    text-align: center;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+#timer::before {
+    content: "Tiempo: ";
+    color: var(--light);
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+#score::before {
+    content: "Puntuación: ";
+    color: var(--light);
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+    #timer, #score {
+        padding: 0.8rem 1rem;
+        font-size: 1rem;
+        min-width: 120px;
+    }
+}
