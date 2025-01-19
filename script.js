@@ -161,4 +161,3 @@ function skipWord() {
     // 2. Move to the next word
     // 3. Update any scores or progress
 }
-

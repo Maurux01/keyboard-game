@@ -1,63 +1,13 @@
-/* Estilos generales */
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #282c34; /* Dark background */
-    color: #61dafb; /* Light blue text */
+    background-color: #2f3542;
+    color: #e3e7ed;
     margin: 0;
     padding: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
     min-height: 100vh;
-}
-
-/* Contenedor principal */
-.game-container {
-    background-color: #20232a; /* Slightly lighter dark background */
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Darker shadow */
-    width: 80%;
-    max-width: 800px;
-}/* Main container enhancements */
-#main-container {
-    background-color: #20232a;
-    padding    .typing-area::placeholder {
-        color: #8b97a8;
-        opacity: 0.7;
-        font-style: italic;
-        transition: opacity 0.3s ease;
-    }
-    
-    .typing-area {
-        background-color: #384150;
-        color: #e3e7ed;
-        border: 1px solid #66a5ad;
-        padding: 15px;
-        border-radius: 8px;
-        font-size: 16px;
-        width: 100%;
-        box-sizing: border-box;
-    }
-    
-    .typing-area:focus {
-        border-color: #80cbc4;
-        outline: none;
-        box-shadow: 0 0 5px rgba(102, 165, 173, 0.3);
-    }
-    
-    .typing-area:focus::placeholder {
-        opacity: 0.4;
-    }: 40px;
-    border-radius: 15px;
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6);
-    margin: 20px auto;
-    width: 90%;
-    max-width: 1000px;
-}
-body {
-    background-color: #2f3542;
-    color: #e3e7ed;
 }
 
 #main-container {
@@ -70,7 +20,6 @@ body {
     max-width: 1000px;
 }
 
-/* Header styling */
 #header {
     text-align: center;
     margin-bottom: 30px;
@@ -89,118 +38,48 @@ body {
     padding: 30px;
     border-radius: 12px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    margin-top: 20px;
 }
 
 .typing-area {
     background-color: #384150;
-    color: #c5d1eb;
+    color: #e3e7ed;
     border: 1px solid #66a5ad;
     padding: 15px;
     border-radius: 8px;
+    font-size: 16px;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+}
+
+.typing-area::placeholder {
+    color: #a0aec0;
+    opacity: 0.8;
+    font-style: italic;
+    transition: all 0.3s ease;
+}
+
+.typing-area:focus::placeholder {
+    opacity: 0.5;
+    transform: translateX(5px);
 }
 
 button {
     background-color: #66a5ad;
     color: #2f3542;
-    transition: all 0.3s ease;
-}
-
-button:hover {
-    background-color: #80cbc4;
-}
-/* Header styling */
-#header {
-    text-align: center;
-    margin-bottom: 30px;
-    padding: 20px;
-    border-bottom: 2px solid #61dafb;
-}
-
-#header h1 {
-    color: #61dafb;
-    font-size: 2.2em;
-    margin-bottom: 25px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-}
-
-/* Game container enhancements */
-#game-container {
-    background-color: #2a2e36;
-    padding: 25px;
-    border-radius: 12px;
-    box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.3);
-    margin-top: 20px;
-}
-
-/* Info section styling */
-#info {
-    display: flex;
-    justify-content: space-between;
-    padding: 15px;
-    background-color: #1a1d24;
-    border-radius: 8px;
-    margin: 20px 0;
-}
-
-/* Input box styling */
-#input-box {
-    background-color: #3b4048;
-    color: #61dafb;
-    border: 2px solid #61dafb;
-    padding: 12px;
-    border-radius: 6px;
-    width: 100%;
-    font-size: 1.1em;
-    transition: all 0.3s ease;
-}
-
-#input-box:focus {
-    outline: none;
-    box-shadow: 0 0 10px rgba(97, 218, 251, 0.5);
-}
-
-/* Button styling */
-button {
-    background-color: #61dafb;
-    color: #282c34;
     border: none;
     padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
     transition: all 0.3s ease;
     font-weight: bold;
-    margin: 0 5px;
+    margin: 10px 5px;
 }
 
 button:hover {
-    background-color: #4fa8c7;
+    background-color: #80cbc4;
     transform: translateY(-2px);
-}
-
-/* Área de texto para escribir */
-.typing-area {
-    background-color: #61dafb; /* Light blue background */
-    color: #282c34; /* Dark text */
-    padding: 15px;
-    border-radius: 5px;
-    width: 100%;
-    box-sizing: border-box;
-}
-
-.text-content {
-    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
-    line-height: 1.6;
-    letter-spacing: 0.3px;
-}
-
-.text-english {
-    color: #a8d8ea;
-    font-weight: 500;
-}
-
-.text-spanish {
-    color: #aa96da;
-    font-weight: 500;
 }
 
 .generated-text {
@@ -217,14 +96,50 @@ button:hover {
     transform: translateX(5px);
 }
 
+.game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #313744, #363d4a);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    margin-top: 20px;
+}
+
+.typing-area {
+    background-color: #384150;
+    color: #e3e7ed;
+    border: 1px solid #66a5ad;
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 16px;
+    width: 80%;
+    text-align: center;
+    margin: 20px 0;
+}
+
 .typing-area::placeholder {
     color: #a0aec0;
     opacity: 0.8;
     font-style: italic;
-    transition: all 0.3s ease;
 }
 
-.typing-area:focus::placeholder {
-    opacity: 0.5;
+.generated-text {
+    padding: 15px;
+    margin: 10px 0;
+    background-color: #2d3440;
+    border-left: 4px solid #66a5ad;
+    border-radius: 0 8px 8px 0;
+    transition: all 0.3s ease;
+    text-align: center;
+    width: 80%;
+}
+
+.generated-text:hover {
+    background-color: #333b4d;
     transform: translateX(5px);
 }
+
+
