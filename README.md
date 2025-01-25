@@ -1,5 +1,6 @@
 
 # Keyboard Game
+![image](https://github.com/user-attachments/assets/fa6c1a66-193d-46a4-8fe2-734bdee3f992)
 
 Keyboard Game is an interactive typing game designed to enhance your typing speed and accuracy. By challenging players to type falling letters before they reach the bottom, it offers an engaging way to improve keyboard skills.
 
