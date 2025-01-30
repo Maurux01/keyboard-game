@@ -1,60 +1,113 @@
 /* styles.css */
 
-/* General Body Styling */
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
 body {
     font-family: 'Arial', sans-serif;
     background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+    color: #333;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
+    justify-content: center;
     height: 100vh;
-    margin: 0;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
-/* Game Container */
-.game-container {
-    text-align: center;
+/* Main Container */
+#main-container {
+    width: 90%;
+    max-width: 600px;
     background-color: #ffffff;
-    padding: 40px 60px;
     border-radius: 15px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-    position: relative;
+    padding: 20px;
+    text-align: center;
     animation: fadeIn 1s ease-in-out;
 }
 
-/* Title Styling */
-h1 {
-    font-size: 2.5em;
-    color: #333;
-    margin-bottom: 10px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-}
-
-/* Subtitle Styling */
-p {
-    font-size: 1.2em;
-    color: #666;
+/* Header Styling */
+#header {
     margin-bottom: 20px;
 }
 
-/* Word Display Styling */
-#word-display {
-    font-size: 2.5em;
+#header h1 {
+    font-size: 1.8em;
+    color: #4CAF50;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+#header-buttons {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+}
+
+#header-buttons button {
+    padding: 10px 15px;
+    font-size: 0.9em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+#language-button {
+    background-color: #FFC107;
+    color: #333;
+}
+
+#start-button {
+    background-color: #4CAF50;
+    color: white;
+}
+
+#pause-button {
+    background-color: #F44336;
+    color: white;
+}
+
+#header-buttons button:hover {
+    transform: scale(1.05);
+}
+
+#language-button:hover {
+    background-color: #FFA000;
+}
+
+#start-button:hover {
+    background-color: #45a049;
+}
+
+#pause-button:hover {
+    background-color: #D32F2F;
+}
+
+/* Game Container Styling */
+#game-container {
+    margin-top: 20px;
+}
+
+#text-to-type {
+    font-size: 1.5em;
     font-weight: bold;
     color: #4CAF50;
-    margin: 20px 0;
-    text-transform: lowercase;
-    letter-spacing: 1px;
+    margin-bottom: 20px;
+    min-height: 50px;
     transition: color 0.3s ease-in-out;
 }
 
-/* User Input Styling */
-#user-input {
-    font-size: 1.5em;
-    padding: 15px;
-    width: 80%;
+#input-box {
+    font-size: 1.2em;
+    padding: 10px;
+    width: 100%;
     margin-bottom: 20px;
     border: 2px solid #ccc;
     border-radius: 10px;
@@ -62,46 +115,54 @@ p {
     transition: border-color 0.3s ease-in-out;
 }
 
-#user-input:focus {
+#input-box:focus {
     border-color: #4CAF50;
     box-shadow: 0 0 8px rgba(76, 175, 80, 0.5);
 }
 
-/* Score Board Styling */
-#score-board {
+/* Info Section */
+#info {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     margin-bottom: 20px;
 }
 
-#score-board p {
-    font-size: 1.2em;
-    color: #333;
+#info p {
+    font-size: 1em;
+    color: #666;
 }
 
-#score-board span {
+#info span {
     font-weight: bold;
     color: #4CAF50;
 }
 
-/* Start Button Styling */
-#start-button {
-    padding: 15px 30px;
-    font-size: 1.2em;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+/* Feedback Section */
+#feedback {
+    font-size: 1em;
+    color: #F44336;
+    margin-bottom: 20px;
+    min-height: 20px;
 }
 
-#start-button:hover {
-    background-color: #45a049;
-    transform: scale(1.05);
+/* Footer Styling */
+.footer {
+    margin-top: 20px;
+    font-size: 0.9em;
+    color: #666;
 }
 
-/* Animation for Game Container */
+.footer a {
+    color: #4CAF50;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+/* Animations */
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -113,18 +174,33 @@ p {
     }
 }
 
-/* Animation for Correct Word */
-.correct-word {
+.correct-text {
     color: #4CAF50 !important;
     animation: bounce 0.5s ease-in-out;
 }
 
-/* Bounce Animation */
+.wrong-text {
+    color: #F44336 !important;
+    animation: shake 0.5s ease-in-out;
+}
+
 @keyframes bounce {
     0%, 100% {
         transform: translateY(0);
     }
     50% {
         transform: translateY(-10px);
+    }
+}
+
+@keyframes shake {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(-5px);
+    }
+    75% {
+        transform: translateX(5px);
     }
 }
