@@ -10,8 +10,8 @@
 /* Body Styling */
 body {
     font-family: 'Arial', sans-serif;
-    background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
-    color: #333;
+    background: linear-gradient(135deg, #fdf1f1, #d4e4fa);
+    color: #444;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -24,7 +24,7 @@ body {
 #main-container {
     width: 90%;
     max-width: 600px;
-    background-color: #008080;
+    background-color: #ffdab9;
     border-radius: 15px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
     padding: 20px;
@@ -39,7 +39,7 @@ body {
 
 #header h1 {
     font-size: 1.8em;
-    color: #4CAF50;
+    color: #ff69b4;
     margin-bottom: 10px;
     letter-spacing: 1px;
 }
@@ -60,17 +60,17 @@ body {
 }
 
 #language-button {
-    background-color: #FFC107;
-    color: #333;
+    background-color: #fdd835;
+    color: #444;
 }
 
 #start-button {
-    background-color: #4CAF50;
+    background-color: #81c784;
     color: white;
 }
 
 #pause-button {
-    background-color: #F44336;
+    background-color: #ef9a9a;
     color: white;
 }
 
@@ -79,15 +79,15 @@ body {
 }
 
 #language-button:hover {
-    background-color: #FFA000;
+    background-color: #ffcc00;
 }
 
 #start-button:hover {
-    background-color: #45a049;
+    background-color: #66bb6a;
 }
 
 #pause-button:hover {
-    background-color: #D32F2F;
+    background-color: #e57373;
 }
 
 /* Game Container Styling */
@@ -98,7 +98,7 @@ body {
 #text-to-type {
     font-size: 1.5em;
     font-weight: bold;
-    color: #4CAF50;
+    color: #ff69b4;
     margin-bottom: 20px;
     min-height: 50px;
     transition: color 0.3s ease-in-out;
@@ -116,8 +116,8 @@ body {
 }
 
 #input-box:focus {
-    border-color: #4CAF50;
-    box-shadow: 0 0 8px rgba(76, 175, 80, 0.5);
+    border-color: #81c784;
+    box-shadow: 0 0 8px rgba(129, 199, 132, 0.5);
 }
 
 /* Info Section */
@@ -134,13 +134,13 @@ body {
 
 #info span {
     font-weight: bold;
-    color: #4CAF50;
+    color: #ff69b4;
 }
 
 /* Feedback Section */
 #feedback {
     font-size: 1em;
-    color: #F44336;
+    color: #ef9a9a;
     margin-bottom: 20px;
     min-height: 20px;
 }
@@ -153,7 +153,7 @@ body {
 }
 
 .footer a {
-    color: #4CAF50;
+    color: #ff69b4;
     text-decoration: none;
     font-weight: bold;
 }
@@ -175,12 +175,12 @@ body {
 }
 
 .correct-text {
-    color: #4CAF50 !important;
+    color: #81c784 !important;
     animation: bounce 0.5s ease-in-out;
 }
 
 .wrong-text {
-    color: #F44336 !important;
+    color: #ef9a9a !important;
     animation: shake 0.5s ease-in-out;
 }
 
